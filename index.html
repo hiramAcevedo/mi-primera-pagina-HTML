@@ -1,0 +1,117 @@
+<!DOCTYPE html> <!--Esta NO es una etiqueta es una declaración que informa al navegador que versión de HTML se uso en el documento se le denomina Document type declaration-->
+<html lang="es-mx"> <!--Este elemento envuelve todo el contenido de la página, se le puede denominar elemento raíz también esta presente el atributo (lang) que participa definiendo el lenguaje de la página (español)-->
+<head> <!--Este es el contenedor que agrega toda la información que no es contenido visible por el usuario, así como los metadatos que requieren los buscadores, hojas de estilos CSS y scripts de JavaScript-->
+    <meta charset="UTF-8"> <!--Con <meta> añadimos toda clase de metadatos a nuestros documentos HTML, usamos el atributo charset="UTF-8" 
+        que determina la codificación de caracteres así podemos escribir practicamente cualquier caracter y será reconocido por el navegador por ejemplo: ñ è ë-->
+    <meta name="author" content="Hiram Agustín Acevedo López"> <!--Los atributos name y content por lo general van juntos ya que name es el nombre asociado a la metainformación y content el contenido asociado-->
+    <meta name="description" content="En este documento practicaremos el uso de etiquetas creando elementos,
+    añadiendole atributos a los mismos y trabajaremos con la estructura básica que tiene HTML">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Metainformación que agrega VSC por defecto para mejorar la compatibilidad con todo tipo de dispositivos la página debería ser + responsiva-->
+    <title>Mi primera página con HTML</title> <!--El título de la página aparece en los buscadores y en la pestaña del navegador-->
+</head>
+<body> <!--Contiene todo el contenido visible de la página texto, imagenes, videos, audio etc.-->
+    <h1 id="Inicio">Mi primera página con HTML <br /> <!--Encabezado principal + <br /> que sirve para hacer un salto de línea + id="Inicio" para regresar al incio-->
+        (encabezado principal h1)</h1>
+
+    <h2>A continuación tenemos una lista desordenada</h2>
+    <h3>Lista de páginas para ver la documentación de HTML</h3>
+    <ul> <!--Esta es una lista no ordenada normalmente usa viñetas o simbolos para mostrar cada uno de los elementos a diferencia de <ol> que usa números-->
+    <li><a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/a" target="_blank">Esta etiqueta es un anchor</a></li> <!--<a> crea un enlace a otras páginas de internet-->
+    <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Nueva página en otra pestaña</a></li> <!--Pero ¿Cómo haríamos una lista sin <li> que son los elementos de la misma-->
+    <li><a href="#h2">Vamos al siguiente encabezado h2</a></li>
+    </ul>
+
+    <p>Da click en el leon:</p>
+    <a href="https://www.youtube.com/watch?v=h0CC8PwxsXw" target="_blank"><img src="https://www.shutterstock.com/image-photo/male-adult-lion-lying-down-260nw-2187468819.jpg" 
+        alt="Un león macho con fondo blanco"/></a>
+    <p></p>
+
+    <h2>Vamos a escribir unos párrafos:</h2>
+
+    <P>Los textos en <b>HTML</b> que no cambian la sección y no determinan una <i>jerárquia o semántica</i> utilizan la etiqueta <strong>(p)</strong>. <br />
+        Aquí podemos escribir toda clase de textos, noticias, poemas, secretos o lo que tu quieras ¿cómo salto de línea? usa <strong>(br/)</strong>. <br /> 
+        Aunque según la <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br" target="_blank">Documentación</a> 
+        no es muy recomendable por los problemas de accesibilidad que puede ocasionar. <br />
+        Recomendación: <u>Usarlos en poemas y direcciones que requieren ese salto de línea arbitrario.</u>
+    </P>
+
+    <h2 id="formatea">Formatea tus textos con las etiquetas adecuadas:</h2>
+
+    <p>
+        Este texto tiene bastante <strong>importancia</strong> así que lo acentuaremos con la etiqueta <strong>(strong)</strong>. <br />
+        Cuando simplemente queremos <b>resaltar</b> una palabra que carezca de real importancia podemos usar la etiqueta <strong>(b)</strong>. <br />
+        Es <strong>importante</strong> <em>NO</em> confundir con <em>(em)</em> que agrega énfasis al elemento. <br />
+        Por último tenemos la etiqueta <mark>(mark) que nos ayuda a representar relevancia.</mark>
+    </p>
+
+    <p>        
+        Cada una de estas etiquetas agrega semántica y coherencia a nuestro documento <strong>HTML.</strong>
+    </p>
+    
+    <h3>No quieren a la b</h3>
+
+    <p>
+        Desgraciadamente para la etiqueta <b>(b)</b> en comparación con sus <em>"primas"</em> se lleva el premio ganador <br />
+        al aportar la menor cantidad de contexto a nuestro documento por lo que es <em>(la menos recomendada)</em> <br />
+
+        según las páginas de referencia para desarrolladores de Mozilla que explican su función:
+        <strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b" target="_blank">(b)</a> y 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong" target="_blank">(strong)</a></strong>.
+    </p>
+    <p>
+        Usar cualquiera de estas 3 opciones es preferible según el proyecto lo demande: <strong>strong</strong>, <em>em</em>, <mark>mark</mark>.
+    </p>
+
+    <h3>¿Y las cursivas y el subrrayado?</h3>
+
+    <p>
+        Utilizamos esas etiquetas en el <strong>primer párrafo</strong> de <a href="#formatea">Formatea tus textos con las etiquetas adecuadas</a> <br />
+        Desgraciadamente al igual que (b), en las nuevas versiones de <strong>HTML</strong> <br />
+        no queda muy clara la función de (i) y (u) de forma semántica 
+        <a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals" target="_blank">referencia.</a>
+    </p>
+
+    <h2>Etiquetas que aprendí hoy lista ordenada</h2>
+    <h3>Estructura</h3>
+
+    <ol reversed> <!--Cuenta al reves-->
+        <li>DOCTYPE (declaración)</li> 
+        <li>html (anida todo el contenido)</li>
+        <li>head</li>
+        <li>body</li>
+    </ol>
+
+    <h3>Dentro del head</h3>
+
+    <ol> 
+        <li>Meta</li> 
+        <li>title</li>
+        <li>link</li>
+        <li>script</li>
+        <li>style</li>
+    </ol>
+
+    <h3>Contenido del body</h3>
+
+    <ol> 
+        <li>h1...h6</li> 
+        <li>p</li>
+        <li>img</li>
+        <li>a</li>
+        <li>div</li>
+        <li>table</li>
+        <li>ul</li>
+        <li>ol</li>
+        <li>li</li>
+        <li>¿menú? (poco soporte)</li>
+        <li>div</li>
+        <li>br</li>
+    </ol>
+
+    <h2 id="h2">Este es un texto de encabezado h2 el menos importante es h6</h2>
+    <p>Estamos justo en el final del body el bloque donde añadimos el contenido de nuestra página y no podemos salir de aquí.</p>
+    <p>Sólo hay un body por página web.</p>
+    <a href="#Inicio">Inicio</a> <!--Agrego href para regresar al inicio de la página-->
+
+</body>
+</html>
